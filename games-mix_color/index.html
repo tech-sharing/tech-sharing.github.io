@@ -9,27 +9,31 @@
 
 
 Example:Blue + Yellow = GreenBlue + Red = Purple
-Mix Color using CMYK in Lua1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253-- color">
+
+Mix Color using CMYK in Lua1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253-- colo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mixing two colors in Lua">
-<meta property="og:url" content="http://tech-sharing.xyz/[object Object]/games-mix_color/index.html">
+<meta property="og:url" content="http://tech-sharing.xyz/games-mix_color/index.html">
 <meta property="og:site_name" content="Tech-Sharing">
 <meta property="og:description" content="mix color in lua
 
 
 Example:Blue + Yellow = GreenBlue + Red = Purple
-Mix Color using CMYK in Lua1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253-- color">
-<meta property="og:updated_time" content="2015-07-02T20:38:59.000Z">
+
+Mix Color using CMYK in Lua1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253-- colo">
+<meta property="og:image" content="http://tech-sharing.xyz/images/mix-color-0.png">
+<meta property="og:updated_time" content="2015-07-02T21:34:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mixing two colors in Lua">
 <meta name="twitter:description" content="mix color in lua
 
 
 Example:Blue + Yellow = GreenBlue + Red = Purple
-Mix Color using CMYK in Lua1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253-- color">
+
+Mix Color using CMYK in Lua1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253-- colo">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
   
 
   <link rel="stylesheet" href="/css/style.css" type="text/css">
@@ -42,10 +46,6 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
   
 
 
-  
-    <style type="text/css">
-      .logo { background-image:url(http://ppoffice.github.io/hexo-theme-hueman/css/images/logo-header.png); }
-    </style>
   
 
   
@@ -76,8 +76,6 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
               
                     <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Lua/">Lua</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tool/">Tool</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/">Web</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/iOS/">iOS</a></li></ul>
                   
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/about/index.html">About</a></li>
-              
             </ul>
             <nav id="sub-nav">
               <div id="search-form-wrap">
@@ -115,7 +113,7 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
         </header>
       
       <p class="article-byline">
-        <a href="/[object Object]/games-mix_color/" class="article-date">
+        <a href="/games-mix_color/" class="article-date">
   <time datetime="2014-12-07T16:00:00.000Z" itemprop="datePublished">2014-12-08</time>
 </a>
       </p>
@@ -125,11 +123,12 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
 </blockquote>
 <hr>
 <p>Example:<br>Blue + Yellow = Green<br>Blue + Red = Purple</p>
+<p><img src="/images/mix-color-0.png" alt="mix color"></p>
 <h3 id="Mix_Color_using_CMYK_in_Lua">Mix Color using CMYK in Lua</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">-- color mix using CMYK mixing</span></span><br><span class="line"><span class="comment">-- Ref:http://stackoverflow.com/questions/14819058/mixing-two-colors-naturally-in-javascript</span></span><br><span class="line"><span class="comment">-- https://github.com/AndreasSoiron/Color_mixer/blob/master/color_mixer.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">colorToCymk</span><span class="params">(aColor)</span></span></span><br><span class="line">    <span class="keyword">local</span> cyan = <span class="number">255</span> - aColor.r</span><br><span class="line">    <span class="keyword">local</span> magenta = <span class="number">255</span> - aColor.g</span><br><span class="line">    <span class="keyword">local</span> yellow = <span class="number">255</span> - aColor.b</span><br><span class="line">    <span class="keyword">local</span> black   = <span class="built_in">math</span>.min(cyan, magenta, yellow);</span><br><span class="line">    <span class="keyword">local</span> cyan    = ((cyan - black) / (<span class="number">255</span> - black));</span><br><span class="line">    <span class="keyword">local</span> magenta = ((magenta - black) / (<span class="number">255</span> - black));</span><br><span class="line">    <span class="keyword">local</span> yellow  = ((yellow  - black) / (<span class="number">255</span> - black));</span><br><span class="line">  <span class="keyword">return</span> &#123;c=cyan,m=magenta,y=yellow,k=black/<span class="number">255</span>&#125;;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">colorToRgba</span><span class="params">(aColor)</span></span></span><br><span class="line">    <span class="keyword">local</span> R=<span class="number">0</span></span><br><span class="line">    <span class="keyword">local</span> G=<span class="number">0</span></span><br><span class="line">    <span class="keyword">local</span> B=<span class="number">0</span></span><br><span class="line">    R = aColor.c * (<span class="number">1.0</span> - aColor.k) + aColor.k</span><br><span class="line">    G = aColor.m * (<span class="number">1.0</span> - aColor.k) + aColor.k</span><br><span class="line">    B = aColor.y * (<span class="number">1.0</span> - aColor.k) + aColor.k</span><br><span class="line">    R = <span class="built_in">math</span>.floor((<span class="number">1.0</span> - R) * <span class="number">255.0</span> + <span class="number">0.5</span>)</span><br><span class="line">    G = <span class="built_in">math</span>.floor((<span class="number">1.0</span> - G) * <span class="number">255.0</span> + <span class="number">0.5</span>)</span><br><span class="line">    B = <span class="built_in">math</span>.floor((<span class="number">1.0</span> - B) * <span class="number">255.0</span> + <span class="number">0.5</span>)</span><br><span class="line">    <span class="keyword">return</span> ccc3(R,G,B);</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">colorMix</span><span class="params">(aColor1,aColor2)</span></span></span><br><span class="line">    <span class="keyword">local</span> C = <span class="number">0</span></span><br><span class="line">    <span class="keyword">local</span> M = <span class="number">0</span></span><br><span class="line">    <span class="keyword">local</span> Y = <span class="number">0</span></span><br><span class="line">    <span class="keyword">local</span> K = <span class="number">0</span></span><br><span class="line">    <span class="keyword">local</span> A = <span class="number">0</span></span><br><span class="line">    <span class="keyword">local</span> colors = &#123;aColor1,aColor2&#125;</span><br><span class="line">    <span class="keyword">for</span> i,v <span class="keyword">in</span> <span class="built_in">ipairs</span>(colors) <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">local</span> tempColor = colorToCymk(v)</span><br><span class="line">        C = C + tempColor.c</span><br><span class="line">        M = M + tempColor.m</span><br><span class="line">        Y = Y + tempColor.y</span><br><span class="line">        K = K + tempColor.k</span><br><span class="line">        <span class="comment">-- A = A + tempColor.a --default 255</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    C = C/<span class="number">2</span> <span class="comment">-- 2:colors length</span></span><br><span class="line">    M = M/<span class="number">2</span></span><br><span class="line">    Y = Y/<span class="number">2</span></span><br><span class="line">    K = K/<span class="number">2</span></span><br><span class="line">    A = A/<span class="number">2</span></span><br><span class="line">    <span class="keyword">local</span> aColorCymk = &#123;c=C,m=M,y=Y,k=K&#125;</span><br><span class="line">    <span class="keyword">local</span> aColorRgb = colorToRgba(aColorCymk)</span><br><span class="line">    <span class="keyword">return</span> aColorRgb</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://tech-sharing.xyz/[object Object]/games-mix_color/" data-id="cibmnlo89000islvy8fl5e7sz" class="article-share-link">分享到</a>
+        <a data-url="http://tech-sharing.xyz/games-mix_color/" data-id="cibmqye28000g88vy8tk3fri6" class="article-share-link">分享到</a>
         
         
       </footer>
@@ -163,7 +162,7 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
     
 <nav id="article-nav">
   
-    <a href="/[object Object]/charles/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/charles/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
       <p class="article-nav-title">
         
@@ -174,7 +173,7 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
     </a>
   
   
-    <a href="/[object Object]/ios-iap/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/ios-iap/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <p class="article-nav-title">Get IAP dynamic</p>
       <i class="icon" id="icon-chevron-left"></i>
@@ -195,28 +194,10 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
             
             <div class="item-thumbnail">
               
-<a href="/[object Object]/hello-world/" class="thumbnail">
+<a href="/charles/" class="thumbnail">
   
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/iOS/">iOS</a></p>
-              <p class="item-title"><a href="/[object Object]/hello-world/" class="title">Hello World</a></p>
-              <p class="item-date"><time datetime="2015-07-02T20:27:59.000Z" itemprop="datePublished">2015-07-03</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              
-<a href="/[object Object]/charles/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
+    <span style="background-image:url(/images/charles-0.png
+)" alt="Charles monitorn app" class="thumbnail-image"></span>
   
 </a>
 
@@ -224,7 +205,7 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/Tool/">Tool</a></p>
-              <p class="item-title"><a href="/[object Object]/charles/" class="title">Charles monitorn app</a></p>
+              <p class="item-title"><a href="/charles/" class="title">Charles monitorn app</a></p>
               <p class="item-date"><time datetime="2015-06-16T16:00:00.000Z" itemprop="datePublished">2015-06-17</time></p>
             </div>
           </li>
@@ -233,9 +214,10 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
             
             <div class="item-thumbnail">
               
-<a href="/[object Object]/games-mix_color/" class="thumbnail">
+<a href="/games-mix_color/" class="thumbnail">
   
-    <span class="thumbnail-image thumbnail-none"></span>
+    <span style="background-image:url(/images/mix-color-0.png
+)" alt="Mixing two colors in Lua" class="thumbnail-image"></span>
   
 </a>
 
@@ -243,7 +225,7 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/Lua/">Lua</a></p>
-              <p class="item-title"><a href="/[object Object]/games-mix_color/" class="title">Mixing two colors in Lua</a></p>
+              <p class="item-title"><a href="/games-mix_color/" class="title">Mixing two colors in Lua</a></p>
               <p class="item-date"><time datetime="2014-12-07T16:00:00.000Z" itemprop="datePublished">2014-12-08</time></p>
             </div>
           </li>
@@ -252,7 +234,7 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
             
             <div class="item-thumbnail">
               
-<a href="/[object Object]/ios-iap/" class="thumbnail">
+<a href="/ios-iap/" class="thumbnail">
   
     <span class="thumbnail-image thumbnail-none"></span>
   
@@ -262,7 +244,7 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/iOS/">iOS</a></p>
-              <p class="item-title"><a href="/[object Object]/ios-iap/" class="title">Get IAP dynamic</a></p>
+              <p class="item-title"><a href="/ios-iap/" class="title">Get IAP dynamic</a></p>
               <p class="item-date"><time datetime="2014-08-20T16:00:00.000Z" itemprop="datePublished">2014-08-21</time></p>
             </div>
           </li>
@@ -271,9 +253,10 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
             
             <div class="item-thumbnail">
               
-<a href="/[object Object]/jekyll/" class="thumbnail">
+<a href="/jekyll/" class="thumbnail">
   
-    <span class="thumbnail-image thumbnail-none"></span>
+    <span style="background-image:url(/images/jekyll-0.png
+)" alt="Jekyll" class="thumbnail-image"></span>
   
 </a>
 
@@ -281,8 +264,28 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a></p>
-              <p class="item-title"><a href="/[object Object]/jekyll/" class="title">Jekyll</a></p>
+              <p class="item-title"><a href="/jekyll/" class="title">Jekyll</a></p>
               <p class="item-date"><time datetime="2014-06-01T16:00:00.000Z" itemprop="datePublished">2014-06-02</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/subline-text/" class="thumbnail">
+  
+    <span style="background-image:url(/images/sublime-text-0.png
+)" alt="Sublime Text" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Tool/">Tool</a></p>
+              <p class="item-title"><a href="/subline-text/" class="title">Sublime Text</a></p>
+              <p class="item-date"><time datetime="2014-05-04T16:00:00.000Z" itemprop="datePublished">2014-05-05</time></p>
             </div>
           </li>
         
@@ -295,23 +298,10 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lua/">Lua</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">4</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lua/">Lua</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
-
-    
-      
-  <div class="widget-wrap widget-list">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
 
     
       
@@ -347,7 +337,7 @@ Mix Color using CMYK in Lua12345678910111213141516171819202122232425262728293031
         <h1 class="logo-wrap">
           <a href="/" class="logo"></a>
         </h1>
-        <p>&copy; 2015 tech sharing</p>
+        <p>&copy; 2015 tech-sharing</p>
         <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
       </div>
     </div>
