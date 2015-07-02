@@ -3,17 +3,42 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | Tech-Sharing</title>
+  <title>Get IAP dynamic | Tech-Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tech-Sharing">
-<meta property="og:url" content="http://tech-sharing.xyz/archives/2015/index.html">
+  <meta name="description" content="动态获取IAP价格。
+
+1、动态获取IAP本地商店价格获取美国商店、中国商店不同的价格
+
+CN:  ￥18
+US:  $2.99
+
+请求
+1&amp;#10;SKProductsRequest* productRequest=[[SKProductsRequest alloc] initWithProductIdentifiers:aProductSet];&amp;#10;productRequest.dele">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Get IAP dynamic">
+<meta property="og:url" content="http://tech-sharing.xyz/[object Object]/ios-iap/index.html">
 <meta property="og:site_name" content="Tech-Sharing">
-<meta property="og:description">
+<meta property="og:description" content="动态获取IAP价格。
+
+1、动态获取IAP本地商店价格获取美国商店、中国商店不同的价格
+
+CN:  ￥18
+US:  $2.99
+
+请求
+1&amp;#10;SKProductsRequest* productRequest=[[SKProductsRequest alloc] initWithProductIdentifiers:aProductSet];&amp;#10;productRequest.dele">
+<meta property="og:updated_time" content="2015-07-02T20:40:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tech-Sharing">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Get IAP dynamic">
+<meta name="twitter:description" content="动态获取IAP价格。
+
+1、动态获取IAP本地商店价格获取美国商店、中国商店不同的价格
+
+CN:  ￥18
+US:  $2.99
+
+请求
+1&amp;#10;SKProductsRequest* productRequest=[[SKProductsRequest alloc] initWithProductIdentifiers:aProductSet];&amp;#10;productRequest.dele">
   
   
     <link rel="icon" href="/favicon.png">
@@ -83,95 +108,61 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon" id="icon-archive"></i>归档: 2015</h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/iOS/">iOS</a></h1>
             </div>
             <div class="main-body-content">
               
-  
-  
-    
-    
+  <article id="post-ios-iap" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year"><i class="icon" id="icon-calendar-o"></i>2015</a>
-        </div>
-        <div class="archives">
-    
-    
-    
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/[object Object]/hello-world/" class="thumbnail">
+        <header class="article-header">
+          
   
-    <span class="thumbnail-image thumbnail-none"></span>
+    <h1 class="article-title" itemprop="name">
+      Get IAP dynamic
+    </h1>
   
-</a>
 
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/iOS/">iOS</a></p>
-        <p class="date"><time datetime="2015-07-02T20:27:59.000Z" itemprop="datePublished">2015-07-03</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/[object Object]/hello-world/" class="title">Hello World</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+        </header>
+      
+      <p class="article-byline">
+        <a href="/[object Object]/ios-iap/" class="article-date">
+  <time datetime="2014-08-20T16:00:00.000Z" itemprop="datePublished">2014-08-21</time>
+</a>
       </p>
+      <div class="article-entry" itemprop="articleBody">
+        <blockquote>
+<p>动态获取IAP价格。</p>
+</blockquote>
+<h3 id="1、动态获取IAP本地商店价格">1、动态获取IAP本地商店价格</h3><p>获取美国商店、中国商店不同的价格</p>
+<blockquote>
+<p>CN:  ￥18</p>
+<p>US:  $2.99</p>
+</blockquote>
+<p>请求</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;SKProductsRequest* productRequest=[[SKProductsRequest alloc] initWithProductIdentifiers:aProductSet];&#10;productRequest.delegate=self;&#10;[productRequest start];</span><br></pre></td></tr></table></figure>
+<p>代理处理</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response &#123;&#10;    id Books = response.products;&#10;    CCArray *rets = CCArray::create();&#10;    for (SKProduct *curProduct in Books) &#123;&#10;        //id &#38; price&#10;        NSNumberFormatter *numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];&#10;        [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];&#10;        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];&#10;        [numberFormatter setLocale:curProduct.priceLocale];&#10;        NSString *formattedPrice = [numberFormatter stringFromNumber:curProduct.price];&#10;&#9;&#9;NSLog(@&#34;%@:%@&#34;, curProduct.productIdentifier,formattedPrice);&#10;        rets-&#62;addObject(CCString::create([curProduct.productIdentifier UTF8String]));&#10;        rets-&#62;addObject(CCString::create([formattedPrice UTF8String]));&#10;    &#125;&#10;    [request release];&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2、购买IAP">2、购买IAP</h3><p>初始化购买监听代理</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;[[SKPaymentQueue defaultQueue] addTransactionObserver:self];</span><br></pre></td></tr></table></figure>
+<p>在didReceiveResponse返回的product加入到购买队列中实现购买</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;SKPayment *payment = [SKPayment paymentWithProduct:curProduct];&#10;[[SKPaymentQueue defaultQueue] addPayment:payment];</span><br></pre></td></tr></table></figure>
+<p>监听代理处理</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions&#10;- (void)paymentQueue:(SKPaymentQueue *)queue removedTransactions:(NSArray *)transactions&#10;- (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error&#10;- (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue&#10;- (void)paymentQueue:(SKPaymentQueue *)queue updatedDownloads:(NSArray *)downloads&#10;&#10;@end</span><br></pre></td></tr></table></figure>
+<h3 id="3、恢复IAP">3、恢复IAP</h3><p>代理如购买IAP实现</p>
+<p>触发如下</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;[[SKPaymentQueue defaultQueue] restoreCompletedTransactions];</span><br></pre></td></tr></table></figure>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://tech-sharing.xyz/[object Object]/ios-iap/" data-id="cibmnlo80000cslvyzwk9jkoh" class="article-share-link">分享到</a>
+        
+        
+      </footer>
     </div>
   </article>
-
-    
   
-    
-    
-    
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/[object Object]/charles/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/Tool/">Tool</a></p>
-        <p class="date"><time datetime="2015-06-16T16:00:00.000Z" itemprop="datePublished">2015-06-17</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/[object Object]/charles/" class="title">Charles monitorn app</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-Charles can monitor the request,response and other more information.
-
-1.Install Charles on osx and get the mac ip address192.168.1.xxx
-2.setting the network on mobile2.1 iOS
-under WiFi settingHTTP PR
-      </p>
-    </div>
-  </article>
-
-    
-      </div>
-    
-  
-  
-    </div></section>
-  
-  
-
 
             </div>
           </section>
@@ -195,6 +186,29 @@ under WiFi settingHTTP PR
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/[object Object]/games-mix_color/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <p class="article-nav-title">
+        
+          Mixing two colors in Lua
+        
+      </p>
+      <i class="icon" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/[object Object]/jekyll/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <p class="article-nav-title">Jekyll</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

@@ -3,17 +3,45 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | Tech-Sharing</title>
+  <title>Sublime Text | Tech-Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tech-Sharing">
-<meta property="og:url" content="http://tech-sharing.xyz/archives/2015/index.html">
+  <meta name="description" content="Sublime Text 工具使用技巧
+
+1、install Package ControlCtrl + Shift + P
+input:
+Package Control: Install Package
+then：
+Install Package
+2、Pretty JSONCTRL + SHIFT + P  and input
+Package Control: Install Package
+i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sublime Text">
+<meta property="og:url" content="http://tech-sharing.xyz/[object Object]/subline-text/index.html">
 <meta property="og:site_name" content="Tech-Sharing">
-<meta property="og:description">
+<meta property="og:description" content="Sublime Text 工具使用技巧
+
+1、install Package ControlCtrl + Shift + P
+input:
+Package Control: Install Package
+then：
+Install Package
+2、Pretty JSONCTRL + SHIFT + P  and input
+Package Control: Install Package
+i">
+<meta property="og:updated_time" content="2015-07-02T20:30:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tech-Sharing">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Sublime Text">
+<meta name="twitter:description" content="Sublime Text 工具使用技巧
+
+1、install Package ControlCtrl + Shift + P
+input:
+Package Control: Install Package
+then：
+Install Package
+2、Pretty JSONCTRL + SHIFT + P  and input
+Package Control: Install Package
+i">
   
   
     <link rel="icon" href="/favicon.png">
@@ -83,95 +111,89 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon" id="icon-archive"></i>归档: 2015</h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/Tool/">Tool</a></h1>
             </div>
             <div class="main-body-content">
               
-  
-  
-    
-    
+  <article id="post-subline-text" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year"><i class="icon" id="icon-calendar-o"></i>2015</a>
-        </div>
-        <div class="archives">
-    
-    
-    
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/[object Object]/hello-world/" class="thumbnail">
+        <header class="article-header">
+          
   
-    <span class="thumbnail-image thumbnail-none"></span>
+    <h1 class="article-title" itemprop="name">
+      Sublime Text
+    </h1>
   
-</a>
 
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/iOS/">iOS</a></p>
-        <p class="date"><time datetime="2015-07-02T20:27:59.000Z" itemprop="datePublished">2015-07-03</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/[object Object]/hello-world/" class="title">Hello World</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+        </header>
+      
+      <p class="article-byline">
+        <a href="/[object Object]/subline-text/" class="article-date">
+  <time datetime="2014-05-04T16:00:00.000Z" itemprop="datePublished">2014-05-05</time>
+</a>
       </p>
+      <div class="article-entry" itemprop="articleBody">
+        <blockquote>
+<p>Sublime Text 工具使用技巧</p>
+</blockquote>
+<h3 id="1、install_Package_Control">1、install Package Control</h3><p>Ctrl + Shift + P</p>
+<p>input:</p>
+<pre><code><span class="keyword">Package</span> Control: Install <span class="keyword">Package</span>
+</code></pre><p>then：</p>
+<pre><code><span class="keyword">Install</span> Package
+</code></pre><h3 id="2、Pretty_JSON">2、Pretty JSON</h3><p>CTRL + SHIFT + P  and input</p>
+<pre><code><span class="keyword">Package</span> Control: Install <span class="keyword">Package</span>
+</code></pre><p>input</p>
+<pre><code>Pretty <span class="built_in">JSON</span>
+</code></pre><p>ENTER then<br>-&gt;Preferences &gt; Package Settings &gt; Pretty JSON &gt; Settings - Default​<br>press：</p>
+<pre><code><span class="built_ins">Cmd</span>+Ctrl+J 
+</code></pre><p>format JSON</p>
+<h3 id="3、support_chinese_package">3、support chinese package</h3><p>subline text2 支持中文，安装ConvertToUTF8</p>
+<p>设置在同一个窗口打开：</p>
+<pre><code>open_files_<span class="keyword">in</span>_new_window：<span class="literal">false</span>
+</code></pre><h3 id="4、Lua—IDE">4、Lua—IDE</h3><p>sublime text2</p>
+<p>tools -&gt;new build system</p>
+<pre><code>{
+    "<span class="attribute">cmd</span>": <span class="value">[<span class="string">"/usr/local/bin/lua"</span>, <span class="string">"$file"</span>]</span>,
+    "<span class="attribute">file_regex</span>": <span class="value"><span class="string">"^(?:lua:)?[\t ](...*?):([0-9]*):?([0-9]*)"</span></span>,
+    "<span class="attribute">selector</span>": <span class="value"><span class="string">"source.lua"</span>
+</span>}
+</code></pre><p>保存为Lua.sublime-build,选择默认bulid System:Lua</p>
+<h3 id="5、安装GitHub插件">5、安装GitHub插件</h3><h4 id="sublime_text2">sublime text2</h4><pre><code><span class="keyword">Shift</span>-<span class="built_in">CMD</span>-P --》 Add Repository
+
+paste github url
+
+<span class="keyword">Shift</span>-<span class="built_in">CMD</span>-P --》 Install Package
+
+<span class="keyword">Shift</span>-<span class="built_in">CMD</span>-P --》 XXXXX(your new package name)
+</code></pre><h4 id="sublime_text3">sublime text3</h4><pre><code>download the github xxx<span class="class">.zip</span>
+
+change name xxx<span class="class">.sublime-package</span>
+
+put the xxx<span class="class">.sublime-package</span> to Packages flode
+
+reboot sublime
+</code></pre><h3 id="6、Quick_Key_for_SublimeText">6、Quick Key for SublimeText</h3><ol>
+<li>shift+”&lt;-“/“-&gt;” :selected word</li>
+<li>ctrl+shift+k:delete line</li>
+<li>shift+cmd+d:copy line and paste</li>
+<li>cmd+”[“/“]”:format code</li>
+<li>cmd + enter:new line next line insert</li>
+<li>cmd + shift +enter:new line before line insert</li>
+</ol>
+<h3 id="7、More_Themes">7、More Themes</h3><p><a href="http://scotch.io/bar-talk/the-best-sublime-text-3-themes-of-2014" target="_blank" rel="external">http://scotch.io/bar-talk/the-best-sublime-text-3-themes-of-2014</a></p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://tech-sharing.xyz/[object Object]/subline-text/" data-id="cibmnlo6v0000slvyhgwc9ng2" class="article-share-link">分享到</a>
+        
+        
+      </footer>
     </div>
   </article>
-
-    
   
-    
-    
-    
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/[object Object]/charles/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/Tool/">Tool</a></p>
-        <p class="date"><time datetime="2015-06-16T16:00:00.000Z" itemprop="datePublished">2015-06-17</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/[object Object]/charles/" class="title">Charles monitorn app</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-Charles can monitor the request,response and other more information.
-
-1.Install Charles on osx and get the mac ip address192.168.1.xxx
-2.setting the network on mobile2.1 iOS
-under WiFi settingHTTP PR
-      </p>
-    </div>
-  </article>
-
-    
-      </div>
-    
-  
-  
-    </div></section>
-  
-  
-
 
             </div>
           </section>
@@ -195,6 +217,29 @@ under WiFi settingHTTP PR
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/[object Object]/jekyll/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <p class="article-nav-title">
+        
+          Jekyll
+        
+      </p>
+      <i class="icon" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/[object Object]/project-gitserver-ubuntu/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <p class="article-nav-title">Git Server on Ubuntu</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

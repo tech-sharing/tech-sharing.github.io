@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | Tech-Sharing</title>
+  <title>iOS 显示文件 | Tech-Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tech-Sharing">
-<meta property="og:url" content="http://tech-sharing.xyz/archives/2015/index.html">
+  <meta name="description" content="iOS显示文件(pdf,doc,txt…)控件实现。
+
+一、UIDocumentInteractionController全屏显示1、封装对象LLFileVC1&amp;#10;#import &amp;#60;Foundation/Foundation.h&amp;#62;&amp;#10;&amp;#10;@interface LLFileVC : UIViewController&amp;#60;UIDocumentInteraction">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 显示文件">
+<meta property="og:url" content="http://tech-sharing.xyz/[object Object]/ios-doc-file/index.html">
 <meta property="og:site_name" content="Tech-Sharing">
-<meta property="og:description">
+<meta property="og:description" content="iOS显示文件(pdf,doc,txt…)控件实现。
+
+一、UIDocumentInteractionController全屏显示1、封装对象LLFileVC1&amp;#10;#import &amp;#60;Foundation/Foundation.h&amp;#62;&amp;#10;&amp;#10;@interface LLFileVC : UIViewController&amp;#60;UIDocumentInteraction">
+<meta property="og:updated_time" content="2015-07-02T20:39:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tech-Sharing">
-<meta name="twitter:description">
+<meta name="twitter:title" content="iOS 显示文件">
+<meta name="twitter:description" content="iOS显示文件(pdf,doc,txt…)控件实现。
+
+一、UIDocumentInteractionController全屏显示1、封装对象LLFileVC1&amp;#10;#import &amp;#60;Foundation/Foundation.h&amp;#62;&amp;#10;&amp;#10;@interface LLFileVC : UIViewController&amp;#60;UIDocumentInteraction">
   
   
     <link rel="icon" href="/favicon.png">
@@ -83,95 +90,47 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon" id="icon-archive"></i>归档: 2015</h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/iOS/">iOS</a></h1>
             </div>
             <div class="main-body-content">
               
-  
-  
-    
-    
+  <article id="post-ios-doc-file" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year"><i class="icon" id="icon-calendar-o"></i>2015</a>
-        </div>
-        <div class="archives">
-    
-    
-    
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/[object Object]/hello-world/" class="thumbnail">
+        <header class="article-header">
+          
   
-    <span class="thumbnail-image thumbnail-none"></span>
+    <h1 class="article-title" itemprop="name">
+      iOS 显示文件
+    </h1>
   
-</a>
 
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/iOS/">iOS</a></p>
-        <p class="date"><time datetime="2015-07-02T20:27:59.000Z" itemprop="datePublished">2015-07-03</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/[object Object]/hello-world/" class="title">Hello World</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+        </header>
+      
+      <p class="article-byline">
+        <a href="/[object Object]/ios-doc-file/" class="article-date">
+  <time datetime="2012-11-08T16:00:00.000Z" itemprop="datePublished">2012-11-09</time>
+</a>
       </p>
+      <div class="article-entry" itemprop="articleBody">
+        <blockquote>
+<p>iOS显示文件(pdf,doc,txt…)控件实现。</p>
+</blockquote>
+<h3 id="一、UIDocumentInteractionController全屏显示">一、UIDocumentInteractionController全屏显示</h3><h4 id="1、封装对象LLFileVC">1、封装对象LLFileVC</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;#import &#60;Foundation/Foundation.h&#62;&#10;&#10;@interface LLFileVC : UIViewController&#60;UIDocumentInteractionControllerDelegate&#62;&#10;&#123;&#10; BOOL        _isShowing;&#10; NSURL *_docURL;&#10;&#125;&#10;&#10;@property (nonatomic, retain) UIDocumentInteractionController *docInteractionController;&#10;-(id)initWithURL:(NSURL*)aURL;&#10;@end</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;#import &#34;LLFileVC.h&#34;&#10;@implementation LLFileVC&#10;@synthesize docInteractionController;&#10;&#10;-(id)initWithURL:(NSURL *)aURL&#10;&#123;&#10; if (self=[super init]) &#10; &#123;&#10;&#9; _isShowing = NO;&#10;&#9; _docURL = [aURL retain];&#10; &#125;&#10; return self;&#10;&#125;&#10;&#10;-(void)dealloc&#10;&#123;&#10; [docInteractionController release];&#10; [_docURL release];&#10; [super dealloc];&#10;&#125;&#10;&#10;-(void)showFile&#10;&#123;&#10; if (_docURL) &#10; &#123;&#10;&#9; self.docInteractionController = [UIDocumentInteractionController interactionControllerWithURL:_docURL];&#10;&#9; self.docInteractionController.delegate = self;&#10;&#9; if (![self.docInteractionController presentPreviewAnimated:YES])&#10;&#9; &#123;&#10;&#9; &#125;&#10; &#125;&#10;&#125;&#10;&#10;-(void)viewDidAppear:(BOOL)animated&#10;&#123;&#10; if (!_isShowing) &#10; &#123;&#10;&#9; [self showFile];&#10; &#125;&#10; else&#10; &#123;&#10;&#9; [self dismissModalViewControllerAnimated:NO];&#10; &#125;&#10; [super viewDidAppear:animated];&#10;&#125;&#10;&#10;&#10;#pragma mark -&#10;#pragma mark UIDocumentInteractionControllerDelegate&#10;&#10;- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller&#10;&#123;&#10; return self;&#10;&#125;&#10;&#10;- (UIView *)documentInteractionControllerViewForPreview:(UIDocumentInteractionController *)controller&#10;&#123;&#10; return self.view;&#10;&#125;&#10;&#10;- (BOOL)documentInteractionController:(UIDocumentInteractionController *)controller canPerformAction:(SEL)action&#10;&#123;&#10; BOOL canPerform = NO;&#10; if (action == @selector(copy:))&#10; canPerform = YES;&#10; return canPerform;&#10;&#125;&#10;&#10;- (BOOL)documentInteractionController:(UIDocumentInteractionController *)controller performAction:(SEL)action&#10;&#123;&#10; BOOL handled = NO;&#10; if (action == @selector(copy:))&#10; &#123;&#10;&#9; handled = YES;&#10; &#125;&#10; return handled;&#10;&#125;&#10;&#10;- (CGRect)documentInteractionControllerRectForPreview:(UIDocumentInteractionController*)controller&#10;&#123;&#10; return self.view.frame;&#10;&#125;&#10;&#10;- (void)documentInteractionControllerWillBeginPreview:(UIDocumentInteractionController *)controller&#10;&#123;&#10; _isShowing = YES;&#10;&#125;&#10;&#10;- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation &#10;&#123;&#10; if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft&#10; || interfaceOrientation == UIInterfaceOrientationLandscapeRight) &#10; &#123;&#10;&#9; return YES;&#10; &#125;&#10; else &#10; &#123;&#10;&#9; return NO;&#10; &#125;&#10;&#125;&#10;&#10;@end</span><br></pre></td></tr></table></figure>
+<h4 id="2、调用全屏浏览">2、调用全屏浏览</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;NSString *rootPath = [self getDocumentsPath];&#10;NSString *filePath = [NSString stringWithFormat:@&#34;%@/doc/%@&#34;,rootPath,_downLoadName];&#10;LLFileVC *aLLFileVC = [[[LLFileVC alloc] initWithURL:[NSURL fileURLWithPath:filePath]] autorelease];&#10;&#10;AppDelegate *app  = (AppDelegate*)[UIApplication sharedApplication].delegate;&#10;[app.window.rootViewController presentModalViewController:aLLFileVC animated:NO];</span><br></pre></td></tr></table></figure>
+<h3 id="二、UIWebView显示局部View">二、UIWebView显示局部View</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;if (!_webView) &#10;&#123;&#10; _webView = [[UIWebView alloc] initWithFrame:_contentView.bounds];&#10; _webView.scalesPageToFit = YES;&#10; [_contentView addSubview:_webView];&#10;&#125;&#10;NSString *rootPath = [self getDocumentsPath];&#10;NSString *filePath = [NSString stringWithFormat:@&#34;%@/weekdoc/%@&#34;,rootPath,[NSString stringWithFormat:@&#34;%@&#34;,[aDic objectForKey:@&#34;wjm&#34;]]];&#10;&#10;NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]];&#10;[_webView loadRequest:request];</span><br></pre></td></tr></table></figure>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://tech-sharing.xyz/[object Object]/ios-doc-file/" data-id="cibmnlo82000eslvyqmtryc7a" class="article-share-link">分享到</a>
+        
+        
+      </footer>
     </div>
   </article>
-
-    
   
-    
-    
-    
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/[object Object]/charles/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/Tool/">Tool</a></p>
-        <p class="date"><time datetime="2015-06-16T16:00:00.000Z" itemprop="datePublished">2015-06-17</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/[object Object]/charles/" class="title">Charles monitorn app</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-Charles can monitor the request,response and other more information.
-
-1.Install Charles on osx and get the mac ip address192.168.1.xxx
-2.setting the network on mobile2.1 iOS
-under WiFi settingHTTP PR
-      </p>
-    </div>
-  </article>
-
-    
-      </div>
-    
-  
-  
-    </div></section>
-  
-  
-
 
             </div>
           </section>
@@ -195,6 +154,29 @@ under WiFi settingHTTP PR
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/[object Object]/project-gitserver-ubuntu/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <p class="article-nav-title">
+        
+          Git Server on Ubuntu
+        
+      </p>
+      <i class="icon" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/[object Object]/ios-push-notification/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <p class="article-nav-title">iOS 远程推送实现</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     
